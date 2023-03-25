@@ -9,9 +9,20 @@
  * splitFirstAndLastNames('John Smith') => ['John', 'Smith']
  */
 
-function splitFirstAndLastNames(str) {
-  return str.split(' ');
+function splitFirstAndLastNames(fullName) {
+  // Split the full name string into an array of names
+  const nameArray = fullName.split(' ');
+
+  // Return the array of names
+  return nameArray;
 }
+
+const fullName = 'John Smith';
+const nameArray = splitFirstAndLastNames(fullName);
+
+console.log(nameArray); // Output: ['John', 'Smith']
+
+
 
 
 /** =========================
@@ -20,9 +31,16 @@ function splitFirstAndLastNames(str) {
  * personAge({ id: 1, name: 'Someone', age: 32}) => 32
  */
 
-const personAge = function(personObject) {
-  return personObject.age;
+const personAge = (personData) => {
+  // Return the value of the age property of the person data object
+  return personData.age;
 }
+
+const person = { id: 1, name: 'Someone', age: 32 };
+const age = personAge(person);
+
+console.log(personAge); // Output: 32
+
 
 
 /** =========================
@@ -32,9 +50,15 @@ const personAge = function(personObject) {
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
 
-const isNameInArray = function(arr, name) {
-  return arr.includes(name);
+function isNameInArray(array, name) {
+  // Check if the name exists in the array
+  return array.includes(name);
 }
+
+const names = ['Jon', 'Michael', 'Andrey'];
+
+console.log(isNameInArray(names, 'Michael')); // Output: true
+console.log(isNameInArray(names, 'James')); // Output: false
 
 
 /** =========================
@@ -44,16 +68,21 @@ const isNameInArray = function(arr, name) {
  * !!! Hint: There are two functions to refactor !!!
  */
 
-const logSecondsUpToMax = function(max) {
-  let i = 0;
-  const timer = setInterval(function() {
-    if (i < max) {
-      console.log(++i);
-    } else {
-      clearInterval(timer);
+function logTimer(num) {
+  let count = num;
+
+  function logSecondsUpToMax(count) {
+    console.log(count);
+    count++;
+    
+    if (count > num + 10) {
+      clearInterval(intervalId);
     }
-  }, 1000);
+  }
+
+  const intervalId = setInterval(intervalid, 1000);
 }
+
 
 
 
