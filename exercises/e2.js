@@ -14,7 +14,6 @@
 
 function rectArea(sideA, sideB) {
   return sideA * sideB;
-  
 }
 
 rectArea(3, 2);
@@ -55,11 +54,19 @@ function totalRoomsArea(area1, area2, area3) {
 totalRoomsArea(24, 35, 24);
 console.log(totalRoomsArea(24, 35, 24), totalRoomsArea)
 
+
 // Make the function call in the parentheses of the console.log statement.
 // Use room1, room2, room3 variables as arguments for the function call
+const result = function () {
+  console.log(totalRoomsArea(room1, room2, room3));
+}
 
 
-console.log(totalRoomsArea(room1, room2, room3), totalRoomsArea);
+
+
+// call result function with variables as arguments
+result(room1, room2, room3);
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"

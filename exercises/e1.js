@@ -50,7 +50,7 @@ function logMessage() {
 // Your code goes here...
 
 function logMessageWithMyName(Andrey) {
-  console.log(`My name is ${Andrey}!`);
+  console.log("My name is " + Andrey + "!");
 }
 
 
@@ -68,8 +68,8 @@ function logMessageWithMyName(Andrey) {
 
 // Your code goes here...
 
-function logMyInfo (a , b){
-  console.log(`My name is ${a}. I am ${b} years old!`)
+function logMyInfo (name , age){
+  console.log(`My name is ${name}. I am ${age} years old!`)
 
 }
 

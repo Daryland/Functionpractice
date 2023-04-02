@@ -9,18 +9,13 @@
  * splitFirstAndLastNames('John Smith') => ['John', 'Smith']
  */
 
-function splitFirstAndLastNames(fullName) {
-  // Split the full name string into an array of names
-  const nameArray = fullName.split(' ');
-
-  // Return the array of names
-  return nameArray;
-}
+const splitFirstAndLastNames = str => str.split(' ');
 
 const fullName = 'John Smith';
 const nameArray = splitFirstAndLastNames(fullName);
 
 console.log(nameArray); // Output: ['John', 'Smith']
+
 
 
 
@@ -50,15 +45,13 @@ console.log(personAge); // Output: 32
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
 
-function isNameInArray(array, name) {
-  // Check if the name exists in the array
-  return array.includes(name);
-}
+const isNameInArray = (array, name) => array.includes(name);
 
 const names = ['Jon', 'Michael', 'Andrey'];
 
 console.log(isNameInArray(names, 'Michael')); // Output: true
 console.log(isNameInArray(names, 'James')); // Output: false
+
 
 
 /** =========================
@@ -68,20 +61,27 @@ console.log(isNameInArray(names, 'James')); // Output: false
  * !!! Hint: There are two functions to refactor !!!
  */
 
-function logTimer(num) {
-  let count = num;
-
-  function logSecondsUpToMax(count) {
-    console.log(count);
-    count++;
-    
-    if (count > num + 10) {
-      clearInterval(intervalId);
-    }
-  }
-
-  const intervalId = setInterval(intervalid, 1000);
+const startTimer = (callback, interval) => {
+  let timer = setInterval(callback, interval);
+  return timer;
 }
+
+const logNumber = number => {
+  console.log(number);
+}
+
+const logSecondsUpToMax = max => {
+  let i = 0;
+  const timer = startTimer(() => {
+    if (i < max) {
+      logNumber(++i);
+    } else {
+      clearInterval(timer);
+    }
+  }, 1000);
+}
+
+
 
 
 
