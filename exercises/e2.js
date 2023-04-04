@@ -51,7 +51,9 @@ function totalRoomsArea(area1, area2, area3) {
   return area1 + area2 + area3;
 }
 
-totalRoomsArea(24, 35, 24);
+
+
+var total = totalRoomsArea(24, 35, 24);
 console.log(totalRoomsArea(24, 35, 24), totalRoomsArea)
 
 
